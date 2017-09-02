@@ -1,0 +1,8 @@
+<form name="todos" method="POST" action="/todos/<%= todo.id %>">
+    <label>Title></label>
+    <input type="text" placeholder="what do you want to do?" id="title" name="title"
+        value="<%= todo.title %>"
+    />
+
+    <button type="submit">SUBMIT </button>
+</form>

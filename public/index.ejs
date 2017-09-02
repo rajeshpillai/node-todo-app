@@ -6,13 +6,16 @@
 
 <body>
     <h2>ALL TASKS</h2>
+    <%- include('../app/views/shared/todo-form') %>
     <ul>
         <% todos.forEach(function(todo){ %>
-          <li><%= todo.title %> <%= todo.completed %> </li>
+          <li><%= todo.title %> <%= todo.completed %>  
+                <a href="/todos/edit/<%=todo.id%>" >edit</a>
+          </li>
         <% }); %>
     </ul>
 
-    <%- include('todo-form') %>
+   
 </body>
 
 </html>

@@ -25,6 +25,7 @@ const server = http.createServer(function (req, res) {
                 res.end(str);
             });
             break;
+       
         case "/todos":
             if (req.method == "POST") {
                 var postedData = "";
@@ -42,10 +43,8 @@ const server = http.createServer(function (req, res) {
                     todos.push(todo);
                     res.writeHead(302, {"Location": "/"});
                     res.end();
-                    
                 })
             }
-            
             break;
     }
 });
