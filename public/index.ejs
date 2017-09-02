@@ -1,0 +1,18 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Todo App </title>
+</head>
+
+<body>
+    <h2>ALL TASKS</h2>
+    <ul>
+        <% todos.forEach(function(todo){ %>
+          <li><%= todo.title %> <%= todo.completed %> </li>
+        <% }); %>
+    </ul>
+
+    <%- include('todo-form') %>
+</body>
+
+</html>
